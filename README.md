@@ -5,6 +5,14 @@ Tools made for usage alongside artistic style transfer projects
 
 Basic usage: `python linear-color-transfer.py --target_image target.png --source_image source.png`
 
+### Dependencies: 
+
+`sudo apt-get install python-skimage`
+
+`sudo pip install numpy`
+
+If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
+
 ### Parameters: 
 
 `--target_image`: The image you are transfering color to. Ex: `target.png`
