@@ -3,7 +3,11 @@ Tools made for usage alongside artistic style transfer projects
 
 # Linear Color Transfer:
 
+### Usage: 
+
 Basic usage: `python linear-color-transfer.py --target_image target.png --source_image source.png`
+
+Advanced usage: `python linear-color-transfer.py --target_image target.png --source_image source.png --output_image output.png --mode pca --eps 1e-5`
 
 ### Dependencies: 
 
