@@ -14,7 +14,7 @@ parser.add_argument('--target_image', type=str, help="The image you are transfer
 parser.add_argument('--source_image', type=str, help="The image you are transfering color from. Ex: source.png", required=True)
 parser.add_argument('--output_image', default='output.png', help="The name of your output image. Ex: output.png", type=str)
 parser.add_argument('--mode', default='pca', help="The color transfer mode. Options are pca, chol, or sym.", type=str)
-parser.add_argument('--eps', default='1e-5', help="Your eps value in scientific notation. Ex: 1e-5", type=str)
+parser.add_argument('--eps', default='1e-5', help="Your eps value in scientific notation or normal notation. Ex: 1e-5 or 0.00001", type=str)
 parser.parse_args()
 args = parser.parse_args()
 target_img = args.target_image
