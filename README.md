@@ -1,7 +1,9 @@
 # Neural-Tools
 Tools made for usage alongside artistic style transfer projects
 
-# Linear Color Transfer:
+# Linear Color Transfer
+
+The `match_color` function's code comes from the very talented Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ScaleControl.ipynb).
 
 ### Usage: 
 
