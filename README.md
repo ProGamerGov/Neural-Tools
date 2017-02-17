@@ -25,7 +25,7 @@ Source Image:
 
 Target Image: 
 
-![](https://i.imgur.com/7FPCSri.jpg)
+![](https://i.imgur.com/7FPCSril.jpg)
 
 Output Image: 
 
