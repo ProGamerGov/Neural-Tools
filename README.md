@@ -15,4 +15,18 @@ Basic usage: `python linear-color-transfer.py --target_image target.png --source
 
 `--mode`: The color transfer mode. Options are pca, chol, or sym.
 
-`--eps`: Your eps value in scientific notation or normal notation. Ex: 1e-5
+`--eps`: Your eps value in scientific notation or normal notation. Ex: 1e-
+
+### Examples: 
+
+Source Image: 
+
+![](https://i.imgur.com/eoX7f3Il.jpg)
+
+Target Image: 
+
+![](https://i.imgur.com/7FPCSri.jpg)
+
+Output Image: 
+
+![](https://i.imgur.com/STZ0Mspl.png)
