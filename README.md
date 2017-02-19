@@ -87,7 +87,7 @@ If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up
 
 ### Parameters: 
 
-The required input and the outputs, are dependent on the `--cp_mode` option that you choose: 
+The required input images and the output images, are dependent on the `--cp_mode` option that you choose: 
 
 * `--cp_mode`: The script's mode. Options are `lum`, `lum2`, `match`, `match_style`.
 
