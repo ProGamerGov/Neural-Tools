@@ -75,7 +75,13 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 `--cp_mode`: The script's mode. Options are `lum`, `lum2`, `match`, `match_style`.
 
-### lum:
+**Mode: lum**:
+
+* **Mode: lum**:
+
+**Mode: `lum`**:
+
+* **Mode: `lum`**:
 
 `--content_image`: Your content image. Ex: `content.png`
 
