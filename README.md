@@ -61,6 +61,20 @@ Output Image:
 
 This script was developed to help enable colour control in [Neural-Style](https://github.com/jcjohnson/neural-style), also known as "Luminance Transfer". This script uses code from Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ColourControl.ipynb).
 
+### Usage:
+
+Basic usage: 
+
+```
+python lum-transfer.py --content_image content.png --style_image style.png
+```
+
+Advanced usage: 
+
+```
+python lum-transfer.py --content_image content.png --style_image style.png --org_content content.png --output_style_image output_style.png --output_content_image output_content.png
+```
+
 ### Dependencies: 
 
 `sudo apt-get install python-skimage`
