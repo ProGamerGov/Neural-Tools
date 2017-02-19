@@ -79,37 +79,37 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 **Mode: `lum`**
 
 
-`--content_image`: Your content image. Ex: `content.png`
+* `--content_image`: Your content image. Ex: `content.png`
 
-`--style_image`: Your style image. Ex: `style.png`
+* `--style_image`: Your style image. Ex: `style.png`
 
-`--org_content`: Your original unmodified content image. Ex: `original_content.png`
+* `--org_content`: Your original unmodified content image. Ex: `original_content.png`
 
-`--output_content_image`: The name of your output content image. Ex: content_output.png
+* `--output_content_image`: The name of your output content image. Ex: content_output.png
 
-`--output_style_image`: The name of your output style image. Ex: style_output.png
+* `--output_style_image`: The name of your output style image. Ex: style_output.png
 
 **Mode: `match`**
 
-`--content_image`: Your content image. Ex: `content.png`
+* `--content_image`: Your content image. Ex: `content.png`
 
-`--style_image`: Your style image. Ex: `style.png`
+* `--style_image`: Your style image. Ex: `style.png`
 
-`--output_style_image`: The name of your output style image. Ex: style_output.png
+* `--output_style_image`: The name of your output style image. Ex: style_output.png
 
 **Mode: `match_style`**
 
-`--content_image`: Your content image. Ex: `content.png`
+* `--content_image`: Your content image. Ex: `content.png`
 
-`--style_image`: Your style image. Ex: `style.png`
+* `--style_image`: Your style image. Ex: `style.png`
 
-`--output_content_image`: The name of your output content image. Ex: content_output.png
+* `--output_content_image`: The name of your output content image. Ex: content_output.png
 
 **Mode: `lum2`**
 
-`--output_lum2`: The name of your output image from Neural-Style. Ex: out.png
+* `--output_lum2`: The name of your output image from Neural-Style. Ex: out.png
 
-`--org_content`: Your original unmodified content image. Ex: `original_content.png`
+* `--org_content`: Your original unmodified content image. Ex: `original_content.png`
 
-`--output_image`: The name of your output image. Ex: `output.png`
+* `--output_image`: The name of your output image. Ex: `output.png`
 
