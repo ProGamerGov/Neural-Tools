@@ -3,7 +3,7 @@ Tools made for usage alongside artistic style transfer projects
 
 # Linear Color Transfer
 
-The `match_color` function's code comes from the very talented Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ScaleControl.ipynb). This script was developed to help enable Scale Control in [Neural-Style](https://github.com/jcjohnson/neural-style), but it can be used for anything else that requires linear color transfer.
+The `match_color` function's code comes from the very talented Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ScaleControl.ipynb). This script was developed to help enable Scale Control in [Neural-Style](https://github.com/jcjohnson/neural-style), but it can be used for anything else that requires linear color transfer. Supported image formats include: `jpg`, `jpeg`, `png`, `tiff`, etc...
 
 Scale Control examples made with [Neural-Style](https://github.com/jcjohnson/neural-style), can be viewed [here](https://github.com/ProGamerGov/Neural-Tools/wiki/Scale-Control-Examples).
 
@@ -61,7 +61,7 @@ Output Image:
 
 # Luminance Transfer
 
-This script was developed to help enable colour control in [Neural-Style](https://github.com/jcjohnson/neural-style), also known as "Luminance Transfer". This script uses code from Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ColourControl.ipynb).
+This script was developed to help enable colour control in [Neural-Style](https://github.com/jcjohnson/neural-style), also known as "Luminance Transfer". This script uses code from Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ColourControl.ipynb). Supported image formats include: `jpg`, `jpeg`, `png`, `tiff`, etc...
 
 ### Usage:
 
