@@ -75,13 +75,9 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 `--cp_mode`: The script's mode. Options are `lum`, `lum2`, `match`, `match_style`.
 
-**Mode: lum**:
 
-* **Mode: lum**:
+**Mode: `lum`**
 
-**Mode: `lum`**:
-
-* **Mode: `lum`**:
 
 `--content_image`: Your content image. Ex: `content.png`
 
@@ -93,7 +89,7 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 `--output_style_image`: The name of your output style image. Ex: style_output.png
 
-### mode match:
+**Mode: `match`**
 
 `--content_image`: Your content image. Ex: `content.png`
 
@@ -101,7 +97,7 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 `--output_style_image`: The name of your output style image. Ex: style_output.png
 
-### match_style:
+**Mode: `match_style`**
 
 `--content_image`: Your content image. Ex: `content.png`
 
@@ -109,7 +105,7 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 `--output_content_image`: The name of your output content image. Ex: content_output.png
 
-### lum2:
+**Mode: `lum2`**
 
 `--output_lum2`: The name of your output image from Neural-Style. Ex: out.png
 
