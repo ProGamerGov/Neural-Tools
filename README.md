@@ -85,9 +85,9 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 * `--org_content`: Your original unmodified content image. Ex: `original_content.png`
 
-* `--output_content_image`: The name of your output content image. Ex: content_output.png
+* `--output_content_image`: The name of your output content image. Ex: `content_output.png`
 
-* `--output_style_image`: The name of your output style image. Ex: style_output.png
+* `--output_style_image`: The name of your output style image. Ex: `style_output.png`
 
 **Mode: `match`**
 
@@ -95,7 +95,7 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 * `--style_image`: Your style image. Ex: `style.png`
 
-* `--output_style_image`: The name of your output style image. Ex: style_output.png
+* `--output_style_image`: The name of your output style image. Ex: `style_output.png`
 
 **Mode: `match_style`**
 
@@ -103,11 +103,11 @@ The required input and the outputs, are dependent on the `--cp_mode` option that
 
 * `--style_image`: Your style image. Ex: `style.png`
 
-* `--output_content_image`: The name of your output content image. Ex: content_output.png
+* `--output_content_image`: The name of your output content image. Ex: `content_output.png`
 
 **Mode: `lum2`**
 
-* `--output_lum2`: The name of your output image from Neural-Style. Ex: out.png
+* `--output_lum2`: The name of your output image from Neural-Style. Ex: `out.png`
 
 * `--org_content`: Your original unmodified content image. Ex: `original_content.png`
 
