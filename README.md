@@ -43,15 +43,15 @@ If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up
 
 ### Examples: 
 
-Source Image: 
+**Source Image:** 
 
 ![](https://i.imgur.com/eoX7f3Il.jpg)
 
-Target Image: 
+**Target Image:** 
 
 ![](https://i.imgur.com/7FPCSril.jpg)
 
-Output Image: 
+**Output Image:** 
 
 ![](https://i.imgur.com/STZ0Mspl.png)
 
