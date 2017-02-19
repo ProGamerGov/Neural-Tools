@@ -54,3 +54,7 @@ Target Image:
 Output Image: 
 
 ![](https://i.imgur.com/STZ0Mspl.png)
+
+---
+
+# Luminance Transfer
