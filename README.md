@@ -129,3 +129,9 @@ The required input images and the output images, are dependent on the `--cp_mode
 
 * `--output_image`: The name of your output image. Ex: `output.png`
 
+### Examples" 
+
+Final ouput image: 
+
+![](https://i.imgur.com/Vk0ym6Ol.png)
+
