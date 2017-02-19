@@ -137,7 +137,7 @@ The style image is adjusted to match the content image:
 
 ![](https://i.imgur.com/dRf3yZHl.png)
 
-After Neural-Style:
+**After Neural-Style:
 
 ![](https://i.imgur.com/hpW8zufl.png)
 
