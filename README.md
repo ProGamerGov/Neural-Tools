@@ -136,6 +136,7 @@ The required input images and the output images, are dependent on the `--cp_mode
 ![](https://i.imgur.com/dRf3yZHl.png)
 
 After Neural-Style:
+
 ![](https://i.imgur.com/hpW8zufl.png)
 
 Final ouput image: 
