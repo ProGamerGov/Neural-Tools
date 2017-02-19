@@ -131,6 +131,8 @@ The required input images and the output images, are dependent on the `--cp_mode
 
 ### Examples:
 
+The style image is adjusted to match the content image:
+
 ![](https://i.imgur.com/Q7phTmel.png)
 
 ![](https://i.imgur.com/dRf3yZHl.png)
