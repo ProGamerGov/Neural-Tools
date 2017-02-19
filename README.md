@@ -131,17 +131,17 @@ The required input images and the output images, are dependent on the `--cp_mode
 
 ### Examples:
 
-The style image is adjusted to match the content image:
+**The style image is adjusted to match the content image:**
 
 ![](https://i.imgur.com/Q7phTmel.png)
 
 ![](https://i.imgur.com/dRf3yZHl.png)
 
-**After Neural-Style:
+**After Neural-Style:**
 
 ![](https://i.imgur.com/hpW8zufl.png)
 
-Final ouput image: 
+**Final ouput image:** 
 
 ![](https://i.imgur.com/Vk0ym6Ol.png)
 
