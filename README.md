@@ -72,7 +72,7 @@ python lum-transfer.py --content_image content.png --style_image style.png
 Advanced usage: 
 
 ```
-python lum-transfer.py --content_image content.png --style_image style.png --org_content content.png --output_style_image output_style.png --output_content_image output_content.png
+python lum-transfer.py --cp_mode lum --content_image content.png --style_image style.png --org_content content.png --output_style_image output_style.png --output_content_image output_content.png
 ```
 
 ### Dependencies: 
