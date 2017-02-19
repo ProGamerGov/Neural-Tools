@@ -58,3 +58,54 @@ Output Image:
 ---
 
 # Luminance Transfer
+
+### Dependencies: 
+
+`sudo apt-get install python-skimage`
+
+`sudo pip install numpy`
+
+If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
+
+### Parameters: 
+
+The required input and the outputs, are dependent on the --cp_mode option that you choose: 
+
+`--cp_mode`: The script's mode. Options are `lum`, `lum2`, `match`, `match_style`.
+
+### `--cp_mode lum`:
+
+`--content_image`: Your content image. Ex: `content.png`
+
+`--style_image`: Your style image. Ex: `style.png`
+
+`--org_content`: Your original unmodified content image. Ex: `original_content.png`
+
+`--output_content_image`: The name of your output content image. Ex: content_output.png
+
+`--output_style_image`: The name of your output style image. Ex: style_output.png
+
+### `--cp_mode match`:
+
+`--content_image`: Your content image. Ex: `content.png`
+
+`--style_image`: Your style image. Ex: `style.png`
+
+`--output_style_image`: The name of your output style image. Ex: style_output.png
+
+### `--cp_mode match_style`:
+
+`--content_image`: Your content image. Ex: `content.png`
+
+`--style_image`: Your style image. Ex: `style.png`
+
+`--output_content_image`: The name of your output content image. Ex: content_output.png
+
+### `--cp_mode lum2`:
+
+`--output_lum2`: The name of your output image from Neural-Style. Ex: out.png
+
+`--org_content`: Your original unmodified content image. Ex: `original_content.png`
+
+`--output_image`: The name of your output image. Ex: `output.png`
+
