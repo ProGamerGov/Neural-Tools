@@ -63,6 +63,8 @@ If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up
 
 This script was developed to help enable colour control in [Neural-Style](https://github.com/jcjohnson/neural-style), also known as "Luminance Transfer". This script uses code from Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ColourControl.ipynb). Supported image formats include: `jpg`, `jpeg`, `png`, `tiff`, etc...
 
+Luminance transfer/Color Control examples made with [Neural-Style](https://github.com/jcjohnson/neural-style), can be found [here](https://github.com/ProGamerGov/Neural-Tools/wiki/Color-Control-Examples).
+
 ### Usage:
 
 Basic usage: 
