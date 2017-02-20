@@ -31,15 +31,15 @@ python linear-color-transfer.py --target_image target.png --source_image source.
 
 ### Parameters: 
 
-`--target_image`: The image you are transfering color to. Ex: `target.png`
+* `--target_image`: The image you are transfering color to. Ex: `target.png`
 
-`--source_image`: The image you are transfering color from. Ex: `source.png`
+* `--source_image`: The image you are transfering color from. Ex: `source.png`
 
-`--output_image`: The name of your output image. Ex: `output.png`
+* `--output_image`: The name of your output image. Ex: `output.png`
 
-`--mode`: The color transfer mode. Options are `pca`, `chol`, or `sym`.
+* `--mode`: The color transfer mode. Options are `pca`, `chol`, or `sym`.
 
-`--eps`: Your eps value in scientific notation or normal notation. Ex: `1e-5` or `0.00001`.
+* `--eps`: Your eps value in scientific notation or normal notation. Ex: `1e-5` or `0.00001`.
 
 ### Examples: 
 
