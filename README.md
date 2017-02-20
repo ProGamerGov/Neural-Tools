@@ -7,6 +7,14 @@ The `match_color` function's code comes from the very talented Leon Gatys' code 
 
 Scale Control examples made with [Neural-Style](https://github.com/jcjohnson/neural-style), can be viewed [here](https://github.com/ProGamerGov/Neural-Tools/wiki/Scale-Control-Examples).
 
+### Dependencies: 
+
+`sudo apt-get install python-skimage`
+
+`sudo pip install numpy`
+
+If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
+
 ### Usage: 
 
 Basic usage: 
@@ -20,14 +28,6 @@ Advanced usage:
 ```
 python linear-color-transfer.py --target_image target.png --source_image source.png --output_image output.png --mode pca --eps 1e-5
 ```
-
-### Dependencies: 
-
-`sudo apt-get install python-skimage`
-
-`sudo pip install numpy`
-
-If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
 
 ### Parameters: 
 
@@ -65,6 +65,14 @@ This script was developed to help enable colour control in [Neural-Style](https:
 
 Luminance transfer/Color Control examples made with [Neural-Style](https://github.com/jcjohnson/neural-style), can be found [here](https://github.com/ProGamerGov/Neural-Tools/wiki/Color-Control-Examples).
 
+### Dependencies: 
+
+`sudo apt-get install python-skimage`
+
+`sudo pip install numpy`
+
+If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
+
 ### Usage:
 
 Basic usage: 
@@ -78,14 +86,6 @@ Advanced usage:
 ```
 python lum-transfer.py --cp_mode lum --content_image content.png --style_image style.png --org_content content.png --output_style_image output_style.png --output_content_image output_content.png
 ```
-
-### Dependencies: 
-
-`sudo apt-get install python-skimage`
-
-`sudo pip install numpy`
-
-If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
 
 ### Parameters: 
 
