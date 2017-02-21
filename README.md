@@ -71,7 +71,9 @@ Luminance transfer/Color Control examples made with [Neural-Style](https://githu
 
 ### How It Works: 
 
-Currently, all available models are trained on images with the RGB/BGR color space. An image's lumiance can represented in the form of gray scale color space image, which can be converted to RGB format for Neural-Style. After the gray scale images are run through Neural-Style, re-applying the color to your output is done with the use of the LUV color space.
+Currently, all available models are trained on images with the RGB/BGR color space. An image's luminance can represented in the form of gray scale color space image, which can be converted to RGB format for Neural-Style. After the gray scale images are run through Neural-Style, re-applying the color to your output is done with the use of the LUV color space.
+
+Basically due to pre-trained model limitations, gray scale images are used to transfer luminance, and a color space supporting luminance is used to transfer the colors back to the finished output. 
 
 ### Dependencies: 
 
