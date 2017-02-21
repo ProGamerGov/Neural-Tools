@@ -57,7 +57,7 @@ python linear-color-transfer.py --target_image target.png --source_image source.
 
 **[See here for how to use this script for Scale Control](https://github.com/ProGamerGov/Neural-Tools/wiki/Scale-Control-Examples)**.
 
-![](https://i.imgur.com/fsqGmJf.jpg)
+![](https://i.imgur.com/fsqGmJfl.png)
 
 ---
 
