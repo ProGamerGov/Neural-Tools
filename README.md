@@ -1,6 +1,8 @@
 # Neural-Tools
 Tools made for usage alongside artistic style transfer projects
 
+Information about how to perform Scale Control and Color Control, can be found on the [wiki](https://github.com/ProGamerGov/Neural-Tools/wiki).
+
 # Linear Color Transfer
 
 The `match_color` function's code comes from the very talented Leon Gatys' code [here](https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ScaleControl.ipynb). This script was developed to help enable Scale Control in [Neural-Style](https://github.com/jcjohnson/neural-style), but it can be used for anything else that requires linear color transfer. Supported image formats include: `jpg`, `jpeg`, `png`, `tiff`, etc...
