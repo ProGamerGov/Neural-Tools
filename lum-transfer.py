@@ -96,6 +96,12 @@ if cp_mode == 'lum':
 	    content_img = lum_transform(content_img)
             style_img -= style_img.mean(0).mean(0)
             style_img += content_img.mean(0).mean(0)
+	
+	    style_img [style_img < 0 ] = 0
+	    style_img [style_img > 1 ] = 1
+
+	    content_img [content_img < 0 ] = 0
+	    content_img [content_img > 1 ] = 1
 
 	    imsave(output_content_name, content_img)
             imsave(output_style_name, style_img)
