@@ -66,6 +66,9 @@ python linear-color-transfer.py --target_image target.png --source_image source.
 
 ![](https://i.imgur.com/6xf5c9yl.jpg)
 
+
+See [here on the wiki](https://github.com/ProGamerGov/Neural-Tools/wiki/Color-Matching), for more details on Color Matching Style Transfer.
+
 ---
 
 ---
