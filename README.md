@@ -64,7 +64,7 @@ python linear-color-transfer.py --target_image target.png --source_image source.
 
 ### Linear Color Transfer is also used for Color Matching Style Transfer:
 
-![](https://i.imgur.com/4sKWQyVl.png)
+![](https://i.imgur.com/6xf5c9yl.jpg)
 
 ---
 
