@@ -1,7 +1,7 @@
 # Neural-Tools
 Tools made for usage alongside artistic style transfer projects
 
-Information about how to perform Scale Control and Color Control, can be found on the [wiki](https://github.com/ProGamerGov/Neural-Tools/wiki).
+Information about how to perform Scale Control and Color Control, can be found on the [wiki](https://github.com/ProGamerGov/Neural-Tools/wiki). The Color Control feature is broken down into two different features known as Luminance-Only Style Transfer, and Color Matching. 
 
 # Linear Color Transfer
 
