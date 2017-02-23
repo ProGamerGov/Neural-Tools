@@ -157,7 +157,7 @@ The required input images and the output images, are dependent on the `--cp_mode
 
 **Final ouput image:** 
 
-![](https://i.imgur.com/Vk0ym6Ol.png)
+![](https://i.imgur.com/o5HDDtDl.png)
 
 ---
 
