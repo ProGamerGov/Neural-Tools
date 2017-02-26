@@ -106,6 +106,8 @@ if cp_mode == 'lum':
 	    imsave(output_content_name, content_img)
             imsave(output_style_name, style_img)
 elif cp_mode =='match':
+	    style_img = args.style_image
+	    content_img = args.content_image
 	    style_img = imread(style_img).astype(float)/256
 	    content_img = imread(content_img).astype(float)/256
 
@@ -113,6 +115,8 @@ elif cp_mode =='match':
 
 	    imsave(output_style_name, style_img)
 elif cp_mode == 'match_style':
+	    style_img = args.style_image
+	    content_img = args.content_image
  	    style_img = imread(style_img).astype(float)/256
 	    content_img = imread(content_img).astype(float)/256
 
