@@ -5,6 +5,7 @@
 
 import numpy as np
 import argparse
+import scipy.ndimage as spi
 from skimage import io,transform,img_as_float
 from skimage.io import imread,imsave
 from numpy import eye 
@@ -23,8 +24,8 @@ output_name = args.output_image
 transfer_mode = args.mode
 eps_value = args.eps
 
-target_img = imread(target_img).astype(float)/256
-source_img = imread(source_img).astype(float)/256
+target_img = spi.imread(target_img, mode="RGB").astype(float)/256
+source_img = spi.imread(source_img, mode="RGB").astype(float)/256
 
 def match_color(target_img, source_img, mode='pca', eps=1e-5):
     '''
