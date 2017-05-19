@@ -15,6 +15,8 @@ Scale Control examples made with [Neural-Style](https://github.com/jcjohnson/neu
 
 `sudo pip install numpy`
 
+`sudo pip install scipy`
+
 If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
 
 ### Usage: 
@@ -90,6 +92,8 @@ Basically due to pre-trained model limitations, gray scale images are used to tr
 `sudo apt-get install python-skimage`
 
 `sudo pip install numpy`
+
+`sudo pip install scipy`
 
 If you already have [Neural-Style](https://github.com/jcjohnson/neural-style) up and running, then you should only need to install `python-skimage`.
 
