@@ -1,5 +1,5 @@
 # Neural-Tools
-Tools made for usage alongside artistic style transfer projects
+Tools made for usage alongside artistic style transfer projects based on the [Controlling Perceptual Factors in Neural Style Transfer](https://arxiv.org/abs/1611.07865) research paper by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge, Aaron Hertzmann, and Eli Shechtman.
 
 **In-depth information about how to perform Scale Control and Color Control, including the Neural-Style parameters used in the examples, can be found on the [wiki](https://github.com/ProGamerGov/Neural-Tools/wiki).** The Color Control feature is broken down into two different features known as Luminance-Only Style Transfer, and Color Matching. The Scale Control feature focuses on separating style image content/shapes, and style image textures. 
 
