@@ -27,6 +27,9 @@ output_content_name = args.output_content_image
 output_style_name = args.output_style_image
 output_a_name = args.output_image
 
+from PIL import Image
+Image.MAX_IMAGE_PIXELS = 1000000000 # Support gigapixel images
+
 def lum_transform(image):
     """
     Returns the projection of a colour image onto the luminance channel
