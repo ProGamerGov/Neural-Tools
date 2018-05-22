@@ -8,6 +8,7 @@ import argparse
 import scipy.ndimage as spi
 from skimage import io,transform,img_as_float
 from skimage.io import imread,imsave
+from PIL import Image
 from numpy import eye 
 
 parser = argparse.ArgumentParser()
@@ -24,7 +25,6 @@ output_name = args.output_image
 transfer_mode = args.mode
 eps_value = args.eps
 
-from PIL import Image
 Image.MAX_IMAGE_PIXELS = 1000000000 # Support gigapixel images
 target_img = spi.imread(target_img, mode="RGB").astype(float)/256
 source_img = spi.imread(source_img, mode="RGB").astype(float)/256
