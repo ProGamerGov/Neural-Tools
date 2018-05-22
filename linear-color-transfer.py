@@ -22,8 +22,16 @@ args = parser.parse_args()
 
 
 Image.MAX_IMAGE_PIXELS = 1000000000 # Support gigapixel images
-target_img = spi.imread(args.target_image, mode="RGB").astype(float)/256
-source_img = spi.imread(args.source_image, mode="RGB").astype(float)/256
+
+
+def main():   
+
+    target_img = spi.imread(args.target_image, mode="RGB").astype(float)/256
+    source_img = spi.imread(args.source_image, mode="RGB").astype(float)/256
+
+    output_img = match_color(target_img, source_img, mode=args.mode, eps=args.eps)
+    imsave(args.output_image, output_img)
+
 
 def match_color(target_img, source_img, mode='pca', eps=1e-5):
     '''
@@ -63,5 +71,6 @@ def match_color(target_img, source_img, mode='pca', eps=1e-5):
     matched_img[matched_img<0] = 0
     return matched_img
 
-output_img = match_color(target_img, source_img, mode=args.mode, eps=args.eps)
-imsave(args.output_image, output_img)
+
+if __name__ == "__main__":
+    main()
