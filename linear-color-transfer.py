@@ -1,7 +1,7 @@
-#This script performs the linear color transfer step that 
-#leongatys/NeuralImageSynthesis' Scale Control code performs.
-#https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ScaleControl.ipynb
-#Standalone script by github.com/htoyryla, and github.com/ProGamerGov
+# This script performs the linear color transfer step that 
+# leongatys/NeuralImageSynthesis' Scale Control code performs.
+# https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ScaleControl.ipynb
+# Standalone script by github.com/htoyryla, and github.com/ProGamerGov
 
 import numpy as np
 import argparse
@@ -16,18 +16,14 @@ parser.add_argument('--target_image', type=str, help="The image you are transfer
 parser.add_argument('--source_image', type=str, help="The image you are transfering color from. Ex: source.png", required=True)
 parser.add_argument('--output_image', default='output.png', help="The name of your output image. Ex: output.png", type=str)
 parser.add_argument('--mode', default='pca', help="The color transfer mode. Options are pca, chol, or sym.", type=str)
-parser.add_argument('--eps', default='1e-5', help="Your eps value in scientific notation or normal notation. Ex: 1e-5 or 0.00001", type=str)
+parser.add_argument('--eps', default='1e-5', help="Your eps value in scientific notation or normal notation. Ex: 1e-5 or 0.00001", type=float)
 parser.parse_args()
 args = parser.parse_args()
-target_img = args.target_image
-source_img = args.source_image
-output_name = args.output_image
-transfer_mode = args.mode
-eps_value = args.eps
+
 
 Image.MAX_IMAGE_PIXELS = 1000000000 # Support gigapixel images
-target_img = spi.imread(target_img, mode="RGB").astype(float)/256
-source_img = spi.imread(source_img, mode="RGB").astype(float)/256
+target_img = spi.imread(args.target_image, mode="RGB").astype(float)/256
+source_img = spi.imread(args.source_image, mode="RGB").astype(float)/256
 
 def match_color(target_img, source_img, mode='pca', eps=1e-5):
     '''
@@ -67,5 +63,5 @@ def match_color(target_img, source_img, mode='pca', eps=1e-5):
     matched_img[matched_img<0] = 0
     return matched_img
 
-output_img = match_color(target_img, source_img, mode=transfer_mode, eps=float(eps_value))
-imsave(output_name, output_img)
+output_img = match_color(target_img, source_img, mode=args.mode, eps=args.eps)
+imsave(args.output_image, output_img)
