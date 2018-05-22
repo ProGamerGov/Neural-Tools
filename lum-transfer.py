@@ -9,7 +9,9 @@ import argparse
 import scipy.ndimage as spi
 from skimage import io,transform,img_as_float
 from skimage.io import imread,imsave
+from PIL import Image
 from numpy import eye 
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--content_image', type=str, help="The content image. Ex: content.png")
@@ -27,7 +29,6 @@ output_content_name = args.output_content_image
 output_style_name = args.output_style_image
 output_a_name = args.output_image
 
-from PIL import Image
 Image.MAX_IMAGE_PIXELS = 1000000000 # Support gigapixel images
 
 def lum_transform(image):
