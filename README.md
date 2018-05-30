@@ -41,7 +41,7 @@ python linear-color-transfer.py --target_image target.png --source_image source.
 
 * `--mode`: The color transfer mode. Options are `pca`, `chol`, or `sym`.
 
-* `--eps`: Your eps value in scientific notation or normal notation. Ex: `1e-5` or `0.00001`.
+* `--eps`: Your epsilon value in scientific notation or normal notation. Ex: `1e-5` or `0.00001`.
 
 ### Examples: 
 
