@@ -6,7 +6,7 @@
 import skimage 
 import numpy as np
 import argparse
-import scipy.ndimage as spi
+import imageio
 from skimage import io,transform,img_as_float
 from skimage.io import imread,imsave
 from PIL import Image
@@ -92,9 +92,9 @@ if cp_mode == 'lum':
 	    style_img = args.style_image
 	    content_img = args.content_image
             org_content = args.org_content
-	    org_content = spi.imread(org_content, mode="RGB").astype(float)/256
-            style_img = spi.imread(style_img, mode="RGB").astype(float)/256
-	    content_img = spi.imread(content_img, mode="RGB").astype(float)/256
+	    org_content = imageio.imread(org_content, pilmode="RGB").astype(float)/256
+            style_img = imageio.imread(style_img, pilmode="RGB").astype(float)/256
+	    content_img = imageio.imread(content_img, pilmode="RGB").astype(float)/256
 	    
             org_content = content_img.copy()
             style_img = lum_transform(style_img)
@@ -113,8 +113,8 @@ if cp_mode == 'lum':
 elif cp_mode =='match':
 	    style_img = args.style_image
 	    content_img = args.content_image
-	    style_img = spi.imread(style_img, mode="RGB").astype(float)/256
-	    content_img = spi.imread(content_img, mode="RGB").astype(float)/256
+	    style_img = imageio.imread(style_img, pilmode="RGB").astype(float)/256
+	    content_img = imageio.imread(content_img, pilmode="RGB").astype(float)/256
 
             style_img = match_color(style_img, content_img, mode='pca')
 
@@ -122,8 +122,8 @@ elif cp_mode =='match':
 elif cp_mode == 'match_style':
 	    style_img = args.style_image
 	    content_img = args.content_image
- 	    style_img = spi.imread(style_img, mode="RGB").astype(float)/256
-	    content_img = spi.imread(content_img, mode="RGB").astype(float)/256
+ 	    style_img = imageio.imread(style_img, pilmode="RGB").astype(float)/256
+	    content_img = imageio.imread(content_img, pilmode="RGB").astype(float)/256
 
             content_img = match_color(content_img, style_img, mode='pca')
 		
@@ -131,8 +131,8 @@ elif cp_mode == 'match_style':
 elif cp_mode == 'lum2':
             output = args.output_lum2
             org_content = args.org_content
-	    org_content = spi.imread(org_content, mode="RGB").astype(float)/256
-	    output = spi.imread(output, mode="RGB").astype(float)/256
+	    org_content = imageio.imread(org_content, pilmode="RGB").astype(float)/256
+	    output = imageio.imread(output, pilmode="RGB").astype(float)/256
 	
 	    org_content = skimage.transform.resize(org_content, output.shape)
 		

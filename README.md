@@ -11,7 +11,7 @@ Scale Control examples made with [Neural-Style](https://github.com/jcjohnson/neu
 
 ### Dependencies: 
 
-`sudo apt-get install python-skimage`
+`sudo pip install imageio`
 
 `sudo pip install numpy`
 
