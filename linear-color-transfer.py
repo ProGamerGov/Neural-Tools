@@ -5,7 +5,7 @@
 
 import numpy as np
 import argparse
-import scipy.ndimage as spi
+import imageio
 from skimage import io,transform,img_as_float
 from skimage.io import imread,imsave
 from PIL import Image
@@ -26,8 +26,8 @@ Image.MAX_IMAGE_PIXELS = 1000000000 # Support gigapixel images
 
 def main():   
 
-    target_img = spi.imread(args.target_image, mode="RGB").astype(float)/256
-    source_img = spi.imread(args.source_image, mode="RGB").astype(float)/256
+    target_img = imageio.imread(args.target_image, pilmode="RGB").astype(float)/256
+    source_img = imageio.imread(args.source_image, pilmode="RGB").astype(float)/256
 
     output_img = match_color(target_img, source_img, mode=args.mode, eps=args.eps)
     imsave(args.output_image, output_img)
