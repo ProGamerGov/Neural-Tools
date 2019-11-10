@@ -12,11 +12,11 @@ from PIL import Image
 from numpy import eye 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--target_image', type=str, help="The image you are transfering color to. Ex: target.png", required=True)
-parser.add_argument('--source_image', type=str, help="The image you are transfering color from. Ex: source.png", required=True)
-parser.add_argument('--output_image', default='output.png', help="The name of your output image. Ex: output.png", type=str)
-parser.add_argument('--mode', default='pca', help="The color transfer mode. Options are pca, chol, or sym.", type=str)
-parser.add_argument('--eps', default='1e-5', help="Your epsilon value in scientific notation or normal notation. Ex: 1e-5 or 0.00001", type=float)
+parser.add_argument('-t', '--target_image', type=str, help="The image you are transfering color to. Ex: target.png", required=True)
+parser.add_argument('-s', '--source_image', type=str, help="The image you are transfering color from. Ex: source.png", required=True)
+parser.add_argument('-o', '--output_image', default='output.png', help="The name of your output image. Ex: output.png", type=str)
+parser.add_argument('-m', '--mode', default='pca', help="The color transfer mode. Options are pca, chol, or sym.", type=str)
+parser.add_argument('-e', '--eps', default='1e-5', help="Your epsilon value in scientific notation or normal notation. Ex: 1e-5 or 0.00001", type=float)
 parser.parse_args()
 args = parser.parse_args()
 
