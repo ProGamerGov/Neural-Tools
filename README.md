@@ -84,7 +84,7 @@ Currently, all available models are trained on images with the RGB/BGR color spa
 
 Basically due to pre-trained model limitations, gray scale images are used to transfer luminance, and a color space supporting luminance is used to transfer the colors back to the finished output. 
 
-### Dependencies: 
+### Installation: 
 
 ```
 pip install neural-tools
