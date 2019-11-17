@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# This script performs the linear color transfer step that 
+# This script performs the linear color transfer step that
 # leongatys/NeuralImageSynthesis' Scale Control code performs.
 # https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ScaleControl.ipynb
 # Standalone script by github.com/htoyryla, and github.com/ProGamerGov
@@ -10,7 +10,7 @@ import imageio
 from skimage import io,transform,img_as_float
 from skimage.io import imread,imsave
 from PIL import Image
-from numpy import eye 
+from numpy import eye
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-t', '--target_image', type=str, help="The image you are transfering color to. Ex: target.png", required=True)
@@ -25,7 +25,7 @@ args = parser.parse_args()
 Image.MAX_IMAGE_PIXELS = 1000000000 # Support gigapixel images
 
 
-def main():   
+def main():
 
     target_img = imageio.imread(args.target_image, pilmode="RGB").astype(float)/256
     source_img = imageio.imread(args.source_image, pilmode="RGB").astype(float)/256
