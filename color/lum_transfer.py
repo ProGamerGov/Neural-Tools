@@ -1,17 +1,17 @@
 #!/usr/bin/env python
-#This script performs the functions required for lumin transfer that 
+#This script performs the functions required for lumin transfer that
 #leongatys/NeuralImageSynthesis' Color Control code performs.
 #https://github.com/leongatys/NeuralImageSynthesis/blob/master/ExampleNotebooks/ColourControl.ipynb
 #Standalone script by github.com/ProGamerGov
 
-import skimage 
+import skimage
 import numpy as np
 import argparse
-import scipy.ndimage as spi
+import imageio
 from skimage import io,transform,img_as_float
 from skimage.io import imread,imsave
 from PIL import Image
-from numpy import eye 
+from numpy import eye
 
 
 parser = argparse.ArgumentParser()
@@ -20,7 +20,7 @@ parser.add_argument('--style_image', type=str, help="The style image. Ex: style.
 parser.add_argument('--output_content_image', default='output_content.png', help="The name of your output content image. Ex: content_output.png", type=str)
 parser.add_argument('--output_style_image', default='output_style.png', help="The name of your output style image. Ex: style_output.png", type=str)
 parser.add_argument('--output_image', default='output_style.png', help="The name of your output image. Ex: output.png", type=str)
-parser.add_argument('--org_content', default='', help="The name of your original content image. Ex: org_content.png", type=str)
+parser.add_argument('--org_content', default='original_content_image.png', help="The name of your original content image. Ex: org_content.png", type=str)
 parser.add_argument('--output_lum2', default='out.png', help="The name of your output image from Neural-Style. Ex: out.png", type=str)
 parser.add_argument('--cp_mode', default='lum', help="The script's mode. Options are: lum, lum2, match, and match_style", type=str)
 parser.parse_args()
@@ -41,7 +41,7 @@ def lum_transform(image):
     lum = np.array([.299, .587, .114]).dot(img).squeeze()
     img = np.tile(lum[None,:],(3,1)).reshape((3,image.shape[0],image.shape[1]))
     return img.transpose(1,2,0)
-  
+
 def rgb2luv(image):
     img = image.transpose(2,0,1).reshape(3,-1)
     luv = np.array([[.299, .587, .114],[-.147, -.288, .436],[.615, -.515, -.1]]).dot(img).reshape((3,image.shape[0],image.shape[1]))
@@ -87,61 +87,67 @@ def match_color(target_img, source_img, mode='pca', eps=1e-5):
     matched_img += mu_s
     matched_img[matched_img>1] = 1
     matched_img[matched_img<0] = 0
-    return matched_img       
-       
-if cp_mode == 'lum':
-           style_img = args.style_image
-           content_img = args.content_image
-           org_content = args.org_content
-           org_content = spi.imread(org_content, mode="RGB").astype(float)/256
-           style_img = spi.imread(style_img, mode="RGB").astype(float)/256
-           content_img = spi.imread(content_img, mode="RGB").astype(float)/256
-           
-           org_content = content_img.copy()
-           style_img = lum_transform(style_img)
-           content_img = lum_transform(content_img)
-           style_img -= style_img.mean(0).mean(0)
-           style_img += content_img.mean(0).mean(0)
-       
-           style_img [style_img < 0 ] = 0
-           style_img [style_img > 1 ] = 1
+    return matched_img
 
-           content_img [content_img < 0 ] = 0
-           content_img [content_img > 1 ] = 1
 
-           imsave(output_content_name, content_img)
-           imsave(output_style_name, style_img)
+def main():
+     if cp_mode == 'lum':
+	    style_img = args.style_image
+	    content_img = args.content_image
+        org_content = args.org_content
+	    org_content = imageio.imread(org_content, pilmode="RGB").astype(float)/256
+        style_img = imageio.imread(style_img, pilmode="RGB").astype(float)/256
+	    content_img = imageio.imread(content_img, pilmode="RGB").astype(float)/256
+
+        org_content = content_img.copy()
+        style_img = lum_transform(style_img)
+	    content_img = lum_transform(content_img)
+        style_img -= style_img.mean(0).mean(0)
+        style_img += content_img.mean(0).mean(0)
+
+	    style_img [style_img < 0 ] = 0
+	    style_img [style_img > 1 ] = 1
+
+	    content_img [content_img < 0 ] = 0
+	    content_img [content_img > 1 ] = 1
+
+	    imsave(output_content_name, content_img)
+        imsave(output_style_name, style_img)
 elif cp_mode =='match':
-           style_img = args.style_image
-           content_img = args.content_image
-           style_img = spi.imread(style_img, mode="RGB").astype(float)/256
-           content_img = spi.imread(content_img, mode="RGB").astype(float)/256
+	    style_img = args.style_image
+	    content_img = args.content_image
+	    style_img = imageio.imread(style_img, pilmode="RGB").astype(float)/256
+	    content_img = imageio.imread(content_img, pilmode="RGB").astype(float)/256
 
-           style_img = match_color(style_img, content_img, mode='pca')
+        style_img = match_color(style_img, content_img, mode='pca')
 
-           imsave(output_style_name, style_img)
-elif cp_mode == 'match_style':
-           style_img = args.style_image
-           content_img = args.content_image
-           style_img = spi.imread(style_img, mode="RGB").astype(float)/256
-           content_img = spi.imread(content_img, mode="RGB").astype(float)/256
+	    imsave(output_style_name, style_img)
+   elif cp_mode == 'match_style':
+	    style_img = args.style_image
+	    content_img = args.content_image
+ 	    style_img = imageio.imread(style_img, pilmode="RGB").astype(float)/256
+	    content_img = imageio.imread(content_img, pilmode="RGB").astype(float)/256
 
-           content_img = match_color(content_img, style_img, mode='pca')
-       	
-           imsave(output_content_name, content_img)
-elif cp_mode == 'lum2':
-            output = args.output_lum2
-            org_content = args.org_content
-            org_content = spi.imread(org_content, mode="RGB").astype(float)/256
-            output = spi.imread(output, mode="RGB").astype(float)/256
-       
-            org_content = skimage.transform.resize(org_content, output.shape)
-       	
-            org_content = rgb2luv(org_content)
-            org_content[:,:,0] = output.mean(2)
-            output = luv2rgb(org_content)
-            output[output<0] = 0
-            output[output>1]=1
-            imsave(output_a_name, output)	   
+        content_img = match_color(content_img, style_img, mode='pca')
+
+	    imsave(output_content_name, content_img)
+    elif cp_mode == 'lum2':
+        output = args.output_lum2
+        org_content = args.org_content
+	    org_content = imageio.imread(org_content, pilmode="RGB").astype(float)/256
+	    output = imageio.imread(output, pilmode="RGB").astype(float)/256
+
+	    org_content = skimage.transform.resize(org_content, output.shape)
+
+        org_content = rgb2luv(org_content)
+        org_content[:,:,0] = output.mean(2)
+        output = luv2rgb(org_content)
+        output[output<0] = 0
+        output[output>1]=1
+	    imsave(output_a_name, output)
 else:
-            raise NameError('Unknown colour preservation mode')
+        raise NameError('Unknown colour preservation mode')
+
+
+if __name__ == "__main__":
+    main()

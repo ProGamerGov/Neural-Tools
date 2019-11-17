@@ -9,26 +9,25 @@ The `match_color` function's code comes from the very talented Leon Gatys' code 
 
 Scale Control examples made with [Neural-Style](https://github.com/jcjohnson/neural-style), can be viewed [here](https://github.com/ProGamerGov/Neural-Tools/wiki/Scale-Control-Examples).
 
-### Dependencies: 
+### Installation: 
 
-`sudo apt-get install python-skimage`
+```
+pip install neural-tools
+```
 
-`sudo pip install numpy`
-
-`sudo pip install scipy`
 
 ### Usage: 
 
 Basic usage: 
 
 ```
-python linear-color-transfer.py --target_image target.png --source_image source.png
+linear-color-transfer --target_image target.png --source_image source.png
 ```
 
 Advanced usage: 
 
 ```
-python linear-color-transfer.py --target_image target.png --source_image source.png --output_image output.png --mode pca --eps 1e-5
+linear-color-transfer --target_image target.png --source_image source.png --output_image output.png --mode pca --eps 1e-5
 ```
 
 ### Parameters: 
@@ -85,26 +84,24 @@ Currently, all available models are trained on images with the RGB/BGR color spa
 
 Basically due to pre-trained model limitations, gray scale images are used to transfer luminance, and a color space supporting luminance is used to transfer the colors back to the finished output. 
 
-### Dependencies: 
+### Installation: 
 
-`sudo apt-get install python-skimage`
-
-`sudo pip install numpy`
-
-`sudo pip install scipy`
+```
+pip install neural-tools
+```
 
 ### Usage:
 
 Basic usage: 
 
 ```
-python lum-transfer.py --content_image content.png --style_image style.png
+lum-transfer --content_image content.png --style_image style.png
 ```
 
 Advanced usage: 
 
 ```
-python lum-transfer.py --cp_mode lum --content_image content.png --style_image style.png --org_content content.png --output_style_image output_style.png --output_content_image output_content.png
+lum-transfer --cp_mode lum --content_image content.png --style_image style.png --org_content content.png --output_style_image output_style.png --output_content_image output_content.png
 ```
 
 ### Parameters: 
@@ -168,4 +165,3 @@ The required input images and the output images, are dependent on the `--cp_mode
 ![](https://i.imgur.com/o5HDDtDl.png)
 
 ---
-
