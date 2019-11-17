@@ -12,6 +12,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     keywords='histogram matching histogram-matching luminance transfer luminance-transfer linear-color-transfer linear color colour',
     scripts=['linear-color-transfer', 'lum-transfer'],
+    entry_points={
+        'console_scripts': ["linear-color-transfer = color.linear_color_transfer:main",
+                            "lum-transfer = color.lum_transfer:main"],
+    },
     url="https://github.com/ProGamerGov/Neural-Tools",
     packages=setuptools.find_packages(),
     install_requires=['numpy', 'scipy', 'imageio', 'pillow'],
