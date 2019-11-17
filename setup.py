@@ -11,7 +11,6 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     keywords='histogram matching histogram-matching luminance transfer luminance-transfer linear-color-transfer linear color colour',
-    scripts=['linear-color-transfer', 'lum-transfer'],
     entry_points={
         'console_scripts': ["linear-color-transfer = color.linear_color_transfer:main",
                             "lct = color.linear_color_transfer:main",
