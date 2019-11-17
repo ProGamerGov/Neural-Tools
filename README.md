@@ -15,6 +15,12 @@ Scale Control examples made with [Neural-Style](https://github.com/jcjohnson/neu
 pip install neural-tools
 ```
 
+Or: 
+
+```
+pip3 install neural-tools
+```
+
 
 ### Usage: 
 
@@ -89,6 +95,13 @@ Basically due to pre-trained model limitations, gray scale images are used to tr
 ```
 pip install neural-tools
 ```
+
+Or: 
+
+```
+pip3 install neural-tools
+```
+
 
 ### Usage:
 
