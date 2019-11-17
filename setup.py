@@ -14,6 +14,7 @@ setuptools.setup(
     scripts=['linear-color-transfer', 'lum-transfer'],
     entry_points={
         'console_scripts': ["linear-color-transfer = color.linear_color_transfer:main",
+                            "lct = color.linear_color_transfer:main",
                             "lum-transfer = color.lum_transfer:main"],
     },
     url="https://github.com/ProGamerGov/Neural-Tools",
