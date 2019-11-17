@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="neural-tools",
-    version="0.0.1",
+    version="0.0.2",
     author="ProGamerGov",
     description="Luminance and histogram matching tools",
     long_description=long_description,
