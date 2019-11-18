@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="neural-tools",
-    version="0.0.2",
+    version="0.0.4",
     author="ProGamerGov",
     description="Luminance and histogram matching tools",
     long_description=long_description,
@@ -18,7 +18,7 @@ setuptools.setup(
     },
     url="https://github.com/ProGamerGov/Neural-Tools",
     packages=setuptools.find_packages(),
-    install_requires=['numpy', 'imageio', 'pillow', 'scikit-image'],
+    install_requires=['numpy', 'scipy', 'imageio', 'pillow', 'scikit-image'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Science/Research",
